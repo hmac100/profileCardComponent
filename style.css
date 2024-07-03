@@ -1,0 +1,111 @@
+*,
+* ::before,
+* ::after {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+:root {
+	--primaryClr-100: hsl(0, 0%, 100%);
+	--primaryClr-600: hsl(227, 10%, 46%);
+	--primaryClr-800: hsl(229, 23%, 23%);
+	--primaryClr-300: hsl(185, 75%, 39%);
+	--neutralClr-400: hsl(0, 0%, 59%);
+	font-family: "Kumbh Sans", sans-serif;
+	font-weight: 400;
+	--fw-bold: 700;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--primaryClr-300);
+	min-height: 100vh;
+	background-image: url("./images/bg-pattern-top.svg"),
+		url("./images/bg-pattern-bottom.svg");
+	background-repeat: no-repeat, no-repeat;
+	background-position: right 50vw bottom 40vh, left 45vw top 55vh;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 340px;
+	min-height: 378px;
+	border-radius: 1rem;
+	color: var(--fontColor900);
+	background-color: var(--primaryClr-100);
+	outline: 1px solid var(--neutralClr-400);
+	background-image: url("./images/bg-pattern-card.svg");
+	background-repeat: no-repeat;
+}
+
+img {
+	border-radius: 50%;
+	outline: 4px solid white;
+	margin-top: 4rem;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: var(--fw-bold);
+	color: var(--primaryClr-800);
+	margin-top: 1rem;
+	padding-top: 10px;
+}
+
+.name span {
+	font-weight: 500;
+	color: var(--neutralClr-400);
+}
+.city {
+	color: var(--neutralClr-400);
+	font-size: 14px;
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.stats {
+	border-top: 1.5px solid hsla(229, 23%, 23%, 0.1);
+	display: flex;
+	padding-top: 1.5rem;
+	width: 100%;
+	text-align: center;
+	justify-content: space-evenly;
+	gap: 5px;
+	font-size: 18px;
+}
+.followers span,
+.likes span,
+.photos span {
+	letter-spacing: 0px;
+	font-size: 18px;
+	font-weight: var(--fw-bold);
+	color: var(--primaryClr-800);
+}
+
+.followers,
+.likes,
+.photos {
+	line-height: 1.2rem;
+	letter-spacing: 2px;
+	color: var(--primaryClr-600);
+	font-size: 10px;
+}
+
+/* ---------------MOBILE------------------- */
+
+@media screen and (max-width: 375px) {
+	body {
+		background-position: right 40vw bottom 40vh, left 50vw top 35vh;
+	}
+	.main {
+		min-width: 325px;
+		min-height: 370px;
+	}
+}
